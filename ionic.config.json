@@ -1,0 +1,7 @@
+{
+  "name": "ImageCaptureApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
