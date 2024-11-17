@@ -2,14 +2,24 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-  },
+ 
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'canvas-capture',
     pathMatch: 'full'
+  },
+ 
+  {
+    path: 'view-captured',
+    loadChildren: () => import('./pages/view-captured/view-captured.module').then( m => m.ViewCapturedPageModule)
+  },
+  {
+    path: 'transit-view',
+    loadChildren: () => import('./pages/transit-view/transit-view.module').then( m => m.TransitViewPageModule)
+  },
+  {
+    path: 'canvas-capture',
+    loadChildren: () => import('./pages/canvas-capture/canvas-capture.module').then( m => m.CanvasCapturePageModule)
   },
 ];
 

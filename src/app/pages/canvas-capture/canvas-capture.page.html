@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Image Capture & Canvas Editor</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-card class="canvas-card">
+    <canvas #canvas >Canvas load the image from camera</canvas>
+  </ion-card>
+  <div class="input-container">
+    <ion-item class="input-item">
+      <ion-label position="floating">Width</ion-label>
+      <ion-input type="number" [(ngModel)]="canvasWidth"></ion-input>
+    </ion-item>
+    <ion-item class="input-item">
+      <ion-label position="floating">Height</ion-label>
+      <ion-input type="number" [(ngModel)]="canvasHeight"></ion-input>
+    </ion-item>
+    <ion-button (click)="resizeImage()">submit</ion-button>
+  </div>
+  <ion-button expand="block" (click)="captureImage()">Open from Camera</ion-button>
+  <ion-button expand="block" (click)="exportImage()">Export Image</ion-button>
+</ion-content> 
